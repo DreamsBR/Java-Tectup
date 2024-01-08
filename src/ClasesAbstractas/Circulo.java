@@ -2,7 +2,7 @@ package ClasesAbstractas;
 
 public class Circulo  extends Figura{
 
-    private static double pi = 3.1416;
+    private static float pi = 3.1416F;
 
     private float radio;
 
@@ -12,12 +12,12 @@ public class Circulo  extends Figura{
     }
 
     @Override
-    public double area() {
+    public float area() {
         return pi * (radio*radio);
     }
 
     @Override
-    public double perimetro() {
+    public float perimetro() {
         return 2 * pi *radio;
     }
 
@@ -30,7 +30,7 @@ public class Circulo  extends Figura{
         return pi;
     }
 
-    public static void setPi(double pi) {
+    public static void setPi(float pi) {
         Circulo.pi = pi;
     }
 

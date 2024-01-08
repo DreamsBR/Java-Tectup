@@ -7,8 +7,8 @@ public abstract class Figura {
     public Figura (String color) {
         this.color = color;
     }
-    public abstract double area();
-    public abstract double perimetro();
+    public abstract float area();
+    public abstract float perimetro();
 
     public void printColor(){
         System.out.println(color);

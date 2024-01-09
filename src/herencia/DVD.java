@@ -23,4 +23,13 @@ public class DVD extends LibraryItem {
     public void setDuracion(short duracion) {
         this.duracion = duracion;
     }
+
+    @Override
+    public String toString() {
+        return "\nDVD -> Id = " + id +
+                "\n   Director = " + director +
+                "\n   Duracion = " + duracion +
+                "\n   Titulo = " + titulo +
+                "\n   Disponible = " + disponible;
+    }
 }

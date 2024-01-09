@@ -1,6 +1,7 @@
 package herencia;
 
 public class Book extends LibraryItem{
+
     private String autor;
     public Book(int id, String titulo, boolean disponible, String autor)
     {
@@ -14,5 +15,13 @@ public class Book extends LibraryItem{
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    @Override
+    public String toString() {
+        return "\nBook -> Id = " + id +
+                "\n   autor = " + autor +
+                "\n   titulo = " + titulo +
+                "\n   disponible = " + disponible ;
     }
 }

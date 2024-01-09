@@ -1,16 +1,17 @@
 package herencia;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Usuario {
     String username;
     int id;
-    ArrayList<LibraryItem> items;
+    List<LibraryItem> items;
 
     public Usuario(String username, int id){
         this.username = username;
         this.id = id;
-        items = new ArrayList<>();
+        this.items = new ArrayList<>();
     }
 
     public Usuario(){}
@@ -31,11 +32,28 @@ public class Usuario {
         this.id = id;
     }
 
-    public ArrayList<LibraryItem> getItems() {
+    public List<LibraryItem> getItems() {
         return items;
     }
 
     public void setItems(ArrayList<LibraryItem> items) {
         this.items = items;
+    }
+
+
+    public void addItem(LibraryItem item) {
+        this.items.add(item);
+    }
+
+    public void deleteItem(LibraryItem item) {
+        this.items.remove(item);
+    }
+
+    @Override
+    public String toString() {
+        return "Bienvenido :  " +
+                "\n Username = " + username +
+                "\n Id = " + id +
+                "\n Items = " + items;
     }
 }

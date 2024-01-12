@@ -1,26 +1,29 @@
 package org.example;
 
-import org.example.model.Circulo;
-import org.example.model.Rectangulo;
-import org.example.model.Triangulo;
+import org.example.model.Bot;
+import org.example.model.Estudiante;
+import org.example.model.Profesor;
 
 public class Main {
     public static void main(String[] args) {
 
-        Circulo circulo = new Circulo(4);
-        System.out.println(circulo.calculateArea());
-        System.out.println(circulo.calculatePerimeter());
+        System.out.println("Profesor");
+        Profesor profesor = new Profesor("Marcos", 25, "Ingles");
+        profesor.iniciarSesion();
+        profesor.realizarAcciones();
+        profesor.cerrarSesion();
 
-        Rectangulo rectangulo = new Rectangulo(6, 3);
-        System.out.println(rectangulo.calculateArea());
-        System.out.println(rectangulo.calculatePerimeter());
+        System.out.println("Estudiante");
+        Estudiante estudiante = new Estudiante("Mateo", 21, "2do grado");
+        estudiante.iniciarSesion();
+        estudiante.realizarAcciones();
+        estudiante.cerrarSesion();
 
-
-        Triangulo triangulo = new Triangulo(6,3,4);
-        System.out.println(triangulo.calculateArea());
-        System.out.println(triangulo.calculatePerimeter());
-
-
+        System.out.println("Bot: ");
+        Bot bot = new Bot("Bot Con");
+        bot.iniciarSesion();
+        bot.cerrarSesion();
+        bot.realizarAcciones();
 
     }
 
